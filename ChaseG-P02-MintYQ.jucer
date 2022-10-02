@@ -4,6 +4,12 @@
               useAppConfig="0" addUsingNamespaceToJuceHeader="0" displaySplashScreen="1"
               jucerFormatVersion="1">
   <MAINGROUP id="bKBzZV" name="ChaseG-P02-MintYQ">
+    <GROUP id="{217BC03C-46A4-C57D-5C45-BDD1C44EF32A}" name="Mu45FilterCalc">
+      <FILE id="athqzD" name="Mu45FilterCalc.cpp" compile="1" resource="0"
+            file="Source/Mu45FilterCalc/Mu45FilterCalc.cpp"/>
+      <FILE id="t4g1kG" name="Mu45FilterCalc.h" compile="0" resource="0"
+            file="Source/Mu45FilterCalc/Mu45FilterCalc.h"/>
+    </GROUP>
     <GROUP id="{A24779CC-76F8-3F3D-8A4C-F61ED82E623E}" name="Source">
       <FILE id="Al0Ym9" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
@@ -12,6 +18,37 @@
       <FILE id="NeKxZ1" name="PluginEditor.cpp" compile="1" resource="0"
             file="Source/PluginEditor.cpp"/>
       <FILE id="KEEAMo" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+    </GROUP>
+    <GROUP id="{DC92F6AF-FD1D-1A3C-0B5B-F5FF4B47638D}" name="StkLite-4.6.1">
+      <FILE id="KjGTXn" name="BiQuad.cpp" compile="1" resource="0" file="Source/StkLite-4.6.1/BiQuad.cpp"/>
+      <FILE id="S3AqKC" name="BiQuad.h" compile="0" resource="0" file="Source/StkLite-4.6.1/BiQuad.h"/>
+      <FILE id="sMMA8G" name="Delay.cpp" compile="1" resource="0" file="Source/StkLite-4.6.1/Delay.cpp"/>
+      <FILE id="hI3LrC" name="Delay.h" compile="0" resource="0" file="Source/StkLite-4.6.1/Delay.h"/>
+      <FILE id="vBhouE" name="DelayA.cpp" compile="1" resource="0" file="Source/StkLite-4.6.1/DelayA.cpp"/>
+      <FILE id="Z8WaeF" name="DelayA.h" compile="0" resource="0" file="Source/StkLite-4.6.1/DelayA.h"/>
+      <FILE id="uQcD1h" name="DelayL.cpp" compile="1" resource="0" file="Source/StkLite-4.6.1/DelayL.cpp"/>
+      <FILE id="yi7FBJ" name="DelayL.h" compile="0" resource="0" file="Source/StkLite-4.6.1/DelayL.h"/>
+      <FILE id="GDXvDE" name="Filter.h" compile="0" resource="0" file="Source/StkLite-4.6.1/Filter.h"/>
+      <FILE id="dvQnKh" name="Fir.cpp" compile="1" resource="0" file="Source/StkLite-4.6.1/Fir.cpp"/>
+      <FILE id="OrkNO3" name="Fir.h" compile="0" resource="0" file="Source/StkLite-4.6.1/Fir.h"/>
+      <FILE id="QD7CRb" name="FormSwep.cpp" compile="1" resource="0" file="Source/StkLite-4.6.1/FormSwep.cpp"/>
+      <FILE id="lQ2You" name="FormSwep.h" compile="0" resource="0" file="Source/StkLite-4.6.1/FormSwep.h"/>
+      <FILE id="i4Mz5L" name="Iir.cpp" compile="1" resource="0" file="Source/StkLite-4.6.1/Iir.cpp"/>
+      <FILE id="EKeScG" name="Iir.h" compile="0" resource="0" file="Source/StkLite-4.6.1/Iir.h"/>
+      <FILE id="ypC4Yj" name="OnePole.cpp" compile="1" resource="0" file="Source/StkLite-4.6.1/OnePole.cpp"/>
+      <FILE id="aVh3gT" name="OnePole.h" compile="0" resource="0" file="Source/StkLite-4.6.1/OnePole.h"/>
+      <FILE id="Vs3Ll1" name="OneZero.cpp" compile="1" resource="0" file="Source/StkLite-4.6.1/OneZero.cpp"/>
+      <FILE id="k5ibVa" name="OneZero.h" compile="0" resource="0" file="Source/StkLite-4.6.1/OneZero.h"/>
+      <FILE id="GLhqoa" name="PoleZero.cpp" compile="1" resource="0" file="Source/StkLite-4.6.1/PoleZero.cpp"/>
+      <FILE id="OetVUd" name="PoleZero.h" compile="0" resource="0" file="Source/StkLite-4.6.1/PoleZero.h"/>
+      <FILE id="RO8Q3m" name="Stk.cpp" compile="1" resource="0" file="Source/StkLite-4.6.1/Stk.cpp"/>
+      <FILE id="qsVkpa" name="Stk.h" compile="0" resource="0" file="Source/StkLite-4.6.1/Stk.h"/>
+      <FILE id="FiyEZh" name="TapDelay.cpp" compile="1" resource="0" file="Source/StkLite-4.6.1/TapDelay.cpp"/>
+      <FILE id="Ot4ATI" name="TapDelay.h" compile="0" resource="0" file="Source/StkLite-4.6.1/TapDelay.h"/>
+      <FILE id="EWO8vm" name="TwoPole.cpp" compile="1" resource="0" file="Source/StkLite-4.6.1/TwoPole.cpp"/>
+      <FILE id="ieSD5l" name="TwoPole.h" compile="0" resource="0" file="Source/StkLite-4.6.1/TwoPole.h"/>
+      <FILE id="OIq5zd" name="TwoZero.cpp" compile="1" resource="0" file="Source/StkLite-4.6.1/TwoZero.cpp"/>
+      <FILE id="LfMihw" name="TwoZero.h" compile="0" resource="0" file="Source/StkLite-4.6.1/TwoZero.h"/>
     </GROUP>
   </MAINGROUP>
   <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>

@@ -11,23 +11,33 @@
 #include <JuceHeader.h>
 #include "PluginProcessor.h"
 
+using namespace juce;
+
 //==============================================================================
 /**
 */
-class ChaseGP02MintYQAudioProcessorEditor  : public juce::AudioProcessorEditor
+class ChaseGP02MintYQAudioProcessorEditor  : public AudioProcessorEditor, public Slider::Listener
 {
 public:
     ChaseGP02MintYQAudioProcessorEditor (ChaseGP02MintYQAudioProcessor&);
     ~ChaseGP02MintYQAudioProcessorEditor() override;
 
     //==============================================================================
-    void paint (juce::Graphics&) override;
+    void paint (Graphics&) override;
     void resized() override;
+
+    void sliderValueChanged(Slider* slider) override;
 
 private:
     // This reference is provided as a quick way for your editor to
     // access the processor object that created it.
     ChaseGP02MintYQAudioProcessor& audioProcessor;
+
+    Slider mFilterFcSlider, mFilterQSlider;
+    Slider filterFcSliders[numBands];
+    Slider filterQSliders[numBands];
+    Slider filterGainSliders[numBands];
+    ComboBox filterTypeCBoxes[numBands];
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (ChaseGP02MintYQAudioProcessorEditor)
 };
