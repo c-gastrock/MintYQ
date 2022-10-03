@@ -16,7 +16,7 @@ using namespace juce;
 //==============================================================================
 /**
 */
-class ChaseGP02MintYQAudioProcessorEditor  : public AudioProcessorEditor, public Slider::Listener
+class ChaseGP02MintYQAudioProcessorEditor  : public AudioProcessorEditor, public Slider::Listener, public ComboBox::Listener, public Timer
 {
 public:
     ChaseGP02MintYQAudioProcessorEditor (ChaseGP02MintYQAudioProcessor&);
@@ -27,17 +27,25 @@ public:
     void resized() override;
 
     void sliderValueChanged(Slider* slider) override;
+    void comboBoxChanged(ComboBox* comboBoxThatHasChanged) override;
+    void timerCallback() override;
 
 private:
     // This reference is provided as a quick way for your editor to
     // access the processor object that created it.
     ChaseGP02MintYQAudioProcessor& audioProcessor;
 
-    Slider mFilterFcSlider, mFilterQSlider;
-    Slider filterFcSliders[numBands];
-    Slider filterQSliders[numBands];
-    Slider filterGainSliders[numBands];
-    ComboBox filterTypeCBoxes[numBands];
+    const static int numBands = 3; // in case wanted to add more bands as a feature
+    Grid mainGrid;
+
+    Slider filterFcSliders[numBands]; // Frequency Cutoff Knobs
+    Slider filterQSliders[numBands]; // Resonance Knobs
+    Slider filterGainSliders[numBands]; // Gain Knobs
+    ComboBox filterTypeCBoxes[numBands]; // Filter Type ComboBoxes
+    
+    Label fcLabels[numBands];
+    Label qLabels[numBands];
+    Label gainLabels[numBands];
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (ChaseGP02MintYQAudioProcessorEditor)
 };

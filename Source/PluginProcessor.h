@@ -14,8 +14,6 @@
 
 using namespace juce;
 
-extern const int numBands = 3; // in case wanted to add more bands as a feature
-
 //==============================================================================
 /**
 */
@@ -64,8 +62,9 @@ public:
 
 private:
 
+    const static int numBands = 3; // in case wanted to add more bands as a feature
     
-    enum FilterType { LPF, HPF, LSF, HSF, BPF, PF };
+    enum FilterType { APF, LPF, HPF, LSF, HSF, BPF, PF };
     std::unordered_map<std::string, FilterType> stf; // string to filtertype
 
     // Mu45: User Parameters

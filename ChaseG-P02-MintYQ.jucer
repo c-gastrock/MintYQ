@@ -2,7 +2,8 @@
 
 <JUCERPROJECT id="VkGLCj" name="ChaseG-P02-MintYQ" projectType="audioplug"
               useAppConfig="0" addUsingNamespaceToJuceHeader="0" displaySplashScreen="1"
-              jucerFormatVersion="1">
+              jucerFormatVersion="1" pluginManufacturer="Musi45" pluginManufacturerCode="Mu45"
+              version="1.0.0">
   <MAINGROUP id="bKBzZV" name="ChaseG-P02-MintYQ">
     <GROUP id="{217BC03C-46A4-C57D-5C45-BDD1C44EF32A}" name="Mu45FilterCalc">
       <FILE id="athqzD" name="Mu45FilterCalc.cpp" compile="1" resource="0"

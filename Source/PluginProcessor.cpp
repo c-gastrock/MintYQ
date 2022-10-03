@@ -24,6 +24,8 @@ ChaseGP02MintYQAudioProcessor::ChaseGP02MintYQAudioProcessor()
                        )
 #endif
 {
+    // Set up dict to map choice names to enum values
+    stf["All Pass"] = APF;
     stf["Low Pass"] = LPF;
     stf["High Pass"] = HPF;
     stf["Low Shelf"] = LSF;
@@ -50,13 +52,13 @@ ChaseGP02MintYQAudioProcessor::ChaseGP02MintYQAudioProcessor()
             10.0f, // maxValue,
             0.0f)); // defaultValue
 
-        const StringArray choices = { "Low Pass", "High Pass", "Low Shelf", "High Shelf", "Band Pass", "Peak" };
+        const StringArray choices = { "All Pass", "Low Pass", "High Pass", "Low Shelf", "High Shelf", "Band Pass", "Peak" };
         auto attributes = AudioParameterChoiceAttributes().withLabel("selected");
 
         addParameter(filterTypes[i] = new AudioParameterChoice("Filter " + std::to_string(i) + " Type", // parameterID,
             "Filt" + std::to_string(i) + "Type", // parameterName,
             choices, // Choice list,
-            0, // default (LPF),
+            0, // default (APF),
             attributes));
     }
 }
@@ -168,6 +170,9 @@ bool ChaseGP02MintYQAudioProcessor::isBusesLayoutSupported (const BusesLayout& l
 void ChaseGP02MintYQAudioProcessor::getFilterCoeffs(float* coeffs, String fType, float fc, float gain, float q) {
 
     switch (stf[fType.toStdString()]) {
+        case APF:
+            Mu45FilterCalc::calcCoeffsAPF(coeffs, fc, 0.0f, sampleRate);
+            break;
         case LPF:
             Mu45FilterCalc::calcCoeffsLPF(coeffs, fc, q, sampleRate);
             break;
